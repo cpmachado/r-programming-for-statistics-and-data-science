@@ -3,4 +3,4 @@ x <- 10:20
 y <- 2 + x
 z <- 3 * y
 answer <- (z - 6) / 3
-print(data.frame(x, y, z, answer))
+data.frame(x, y, z, answer)
