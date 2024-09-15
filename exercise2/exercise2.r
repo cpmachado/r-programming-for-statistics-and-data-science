@@ -1,14 +1,14 @@
 # See LICENSE for details.
 employee_names <- c(
-  "Belinda Johnes",  
-  "Maria Delar",  
-  "Math Smith",  
-  "Matt Williams",  
-  "Robert Mathews",  
-  "Julia Walters",  
-  "Andrea Cheng",  
-  "July Horitz",  
-  "Danielle Muller",  
+  "Belinda Johnes",
+  "Maria Delar",
+  "Math Smith",
+  "Matt Williams",
+  "Robert Mathews",
+  "Julia Walters",
+  "Andrea Cheng",
+  "July Horitz",
+  "Danielle Muller",
   "Esteban Lugo"
 )
 

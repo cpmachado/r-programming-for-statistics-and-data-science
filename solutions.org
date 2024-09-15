@@ -42,15 +42,15 @@ Some kind of coercion is applied to transform double to character.
 #+begin_src R :mkdirp yes :tangle exercise2/exercise2.r
   # See LICENSE for details.
   employee_names <- c(
-    "Belinda Johnes",  
-    "Maria Delar",  
-    "Math Smith",  
-    "Matt Williams",  
-    "Robert Mathews",  
-    "Julia Walters",  
-    "Andrea Cheng",  
-    "July Horitz",  
-    "Danielle Muller",  
+    "Belinda Johnes",
+    "Maria Delar",
+    "Math Smith",
+    "Matt Williams",
+    "Robert Mathews",
+    "Julia Walters",
+    "Andrea Cheng",
+    "July Horitz",
+    "Danielle Muller",
     "Esteban Lugo"
   )
 
@@ -81,4 +81,3 @@ Some kind of coercion is applied to transform double to character.
 
 #+RESULTS:
 : character
-
