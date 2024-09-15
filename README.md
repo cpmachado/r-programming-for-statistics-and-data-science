@@ -1,6 +1,6 @@
 # r-programming-for-statistics-and-data-science
 
-My code through the Udemy course "R Programming for Statistics and Data Sciente".
+My code through the Udemy course "R Programming for Statistics and Data Science".
 
 ## Links
 
