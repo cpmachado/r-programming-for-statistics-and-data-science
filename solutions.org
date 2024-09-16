@@ -1,10 +1,12 @@
 #+title: Solutions to R Programming for Statistics and Data Science
 #+startup: overview indent
-#+columns: %ITEM %CHAPTER
+#+columns: %ITEM %SECTION %CHAPTER
+#+PROPERTY: SECTION_ALL 3 4
 
 * Exercise 1: Creating an object in R
 :PROPERTIES:
 :CHAPTER:  8
+:SECTION:  3
 :END:
 Use pemdas and it will work, hence the parantheses in the answer.
 
@@ -35,6 +37,7 @@ Use pemdas and it will work, hence the parantheses in the answer.
 * Exercise 2: Data types in R
 :PROPERTIES:
 :CHAPTER:  11
+:SECTION:  3
 :END:
 Some kind of coercion is applied to transform double to character.
 
@@ -84,6 +87,7 @@ Some kind of coercion is applied to transform double to character.
 * Exercise 3: Coercion rules in R
 :PROPERTIES:
 :CHAPTER:  13
+:SECTION:  3
 :END:
 
 I expected the conversion to "TRUE" and "FALSE", as well as the
@@ -143,6 +147,7 @@ seems.
 * Exercise 4: Using functions in R
 :PROPERTIES:
 :CHAPTER:  15
+:SECTION:  3
 :END:
 #+begin_src R :colnames yes :tangle exercise04.r
   # See LICENSE for details.
@@ -170,6 +175,7 @@ seems.
 * Exercise 5: The arguments of a function
 :PROPERTIES:
 :CHAPTER:  17
+:SECTION:  3
 :END:
 
 The na.rm parameter in median ignores NA values, which if passed become the result.
@@ -218,6 +224,7 @@ The na.rm parameter in median ignores NA values, which if passed become the resu
 * Exercise 6: Building a function in R
 :PROPERTIES:
 :CHAPTER:  19
+:SECTION:  3
 :END:
 #+begin_src R :tangle exercise06.r
   # See LICENSE for details.
@@ -235,6 +242,7 @@ The na.rm parameter in median ignores NA values, which if passed become the resu
 * Exercise 7: Vector recycling
 :PROPERTIES:
 :CHAPTER:  24
+:SECTION:  4
 :END:
 The weight gets recycled.
 #+begin_src R :tangle exercise07.r
@@ -251,6 +259,7 @@ The weight gets recycled.
 * Exercise 8: Vector attributes - names
 :PROPERTIES:
 :CHAPTER:  26
+:SECTION:  4
 :END:
 #+begin_src R :tangle exercise08.r
   # See LICENSE for details.
@@ -314,6 +323,7 @@ The weight gets recycled.
 * Exercise 9: Indexing and slicing a vector
 :PROPERTIES:
 :CHAPTER:  29
+:SECTION:  4
 :END:
 #+begin_src R :tangle exercise09.r
   # See LICENSE for details.
@@ -340,6 +350,7 @@ The weight gets recycled.
 * Exercise 10: Vector attributes - dimension
 :PROPERTIES:
 :CHAPTER:  31
+:SECTION:  4
 :END:
 
 #+begin_src R :tangle exercise10.r
