@@ -1,0 +1,10 @@
+# See LICENSE for details.
+s <- seq(2, 30, 2)
+attributes(s)
+class(s)
+dim(s) <- c(3, 5)
+attributes(s)
+class(s)
+dim(s) <- c(1, 3, 5)
+attributes(s)
+class(s)
