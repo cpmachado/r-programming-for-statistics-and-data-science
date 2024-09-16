@@ -14,7 +14,7 @@ Completion documented.
 1. [x] Introduction
 2. [x] Getting Started
 3. [x] The building blocks of R
-4. [ ] Vectors and vector Operations
+4. [x] Vectors and vector Operations
 5. [ ] Matrices
 6. [ ] Fundamentals of programming with R
 7. [ ] Data frames
