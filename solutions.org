@@ -8,7 +8,7 @@
 :END:
 Use pemdas and it will work, hence the parantheses in the answer.
 
-#+begin_src R :mkdirp yes :colnames yes :tangle exercise1/exercise1.r
+#+begin_src R :colnames yes :tangle exercise01.r
   # See LICENSE for details.
   x <- 10:20
   y <- 2 + x
@@ -32,14 +32,13 @@ Use pemdas and it will work, hence the parantheses in the answer.
 | 19 | 21 | 63 |     19 |
 | 20 | 22 | 66 |     20 |
 
-
 * Exercise 2: Data types in R
 :PROPERTIES:
 :CHAPTER:  11
 :END:
 Some kind of coercion is applied to transform double to character.
 
-#+begin_src R :mkdirp yes :tangle exercise2/exercise2.r
+#+begin_src R :tangle exercise02.r
   # See LICENSE for details.
   employee_names <- c(
     "Belinda Johnes",
@@ -81,3 +80,63 @@ Some kind of coercion is applied to transform double to character.
 
 #+RESULTS:
 : character
+
+* Exercise 3: Coercion rules in R
+:PROPERTIES:
+:CHAPTER:  13
+:END:
+
+I expected the conversion to "TRUE" and "FALSE", as well as the
+numeric on logical, as it appears that R strives towards the more
+reasonable representation.
+
+There is no straight logical translation from strings to numbers, or
+from numbers and strings to logical, thus a hierarchy rises. Or so it
+seems.
+
+#+begin_src R :tangle exercise03.r
+  # See LICENSE for details.
+  employee_names <- c(
+    "Belinda Johnes",
+    "Maria Delar",
+    "Math Smith",
+    "Matt Williams",
+    "Robert Mathews",
+    "Julia Walters",
+    "Andrea Cheng",
+    "July Horitz",
+    "Danielle Muller",
+    "Esteban Lugo"
+  )
+
+  salary <- c(
+    3000,
+    NA,
+    NA,
+    NA,
+    NA,
+    4000,
+    3000,
+    5000,
+    1000,
+    5000
+  )
+
+  # my linter says using single letter is bad practice
+  yearly_bonus <- c(TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE)
+
+  employees <- c(employee_names, salary, yearly_bonus)
+
+  # -> "character"
+  typeof(employees)
+
+  # maintain consistency
+  coerce.check <- c(salary, yearly_bonus)
+
+  # -> "double"
+  typeof(coerce.check)
+#+end_src
+
+#+RESULTS:
+: double
+
