@@ -231,3 +231,19 @@ The na.rm parameter in median ignores NA values, which if passed become the resu
 
   print(flip(coin, size, prob))
 #+end_src
+
+* Exercise 7: Vector recycling
+:PROPERTIES:
+:CHAPTER:  24
+:END:
+The weight gets recycled.
+#+begin_src R :tangle exercise07.r
+  # See LICENSE for details.
+
+  weight <- c(71, 67, 83, 67)
+  height <- c(1.75, 1.81, 1.78, 1.82, 1.97, 2.12, 1.75)
+
+  bmi <- weight / height^2
+
+  print(bmi)
+#+end_src
