@@ -214,3 +214,20 @@ The na.rm parameter in median ignores NA values, which if passed become the resu
 | years_of_experience_median_rmt | years_of_experience_median | salary_median_rmt | salary_median |
 |--------------------------------+----------------------------+-------------------+---------------|
 |                             10 |                         10 |              3500 |               |
+
+* Exercise 6: Building a function in R
+:PROPERTIES:
+:CHAPTER:  19
+:END:
+#+begin_src R :tangle exercise06.r
+  # See LICENSE for details.
+  coin <- c("heads", "tails")
+  prob <- c(0.3, 0.7)
+  size <- 100
+
+  flip <- function(coin, size, prob) {
+    sample(coin, size = size, prob = prob, replace = TRUE)
+  }
+
+  print(flip(coin, size, prob))
+#+end_src
