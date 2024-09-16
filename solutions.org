@@ -166,3 +166,51 @@ seems.
 | sum | avg | median | length |               sd | rounded_sd |
 |-----+-----+--------+--------+------------------+------------|
 |  82 | 8.2 |     10 |     10 | 4.02216083439956 |          4 |
+
+* Exercise 5: The arguments of a function
+:PROPERTIES:
+:CHAPTER:  17
+:END:
+
+The na.rm parameter in median ignores NA values, which if passed become the result.
+
+#+begin_src R :colnames yes :tangle exercise05.r
+  # See LICENSE for details.
+
+  # args will only tell you the name of arguments
+  args(sample)
+  args(median)
+
+  # You should use help with either approach, as it gives you the proper
+  # documentation, for example na.rm ignores NA values in regards to
+  # salary in the computation.
+  ?sample
+  ?median
+
+
+  years_of_experience <- c(8, 10, 10, 1, 10, 10, 8, 12, 1, 12)
+  salary <- c(
+    3000,
+    NA,
+    NA,
+    NA,
+    NA,
+    4000,
+    3000,
+    5000,
+    1000,
+    5000
+  )
+
+  data.frame(
+    years_of_experience_median_rmt = median(na.rm = TRUE, years_of_experience),
+    years_of_experience_median = median(years_of_experience),
+    salary_median_rmt = median(na.rm = TRUE, salary),
+    salary_median = median(salary)
+  )
+#+end_src
+
+#+RESULTS:
+| years_of_experience_median_rmt | years_of_experience_median | salary_median_rmt | salary_median |
+|--------------------------------+----------------------------+-------------------+---------------|
+|                             10 |                         10 |              3500 |               |
