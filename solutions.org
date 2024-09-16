@@ -140,3 +140,29 @@ seems.
 #+RESULTS:
 : double
 
+* Exercise 4: Using functions in R
+:PROPERTIES:
+:CHAPTER:  15
+:END:
+#+begin_src R :colnames yes :tangle exercise04.r
+  # See LICENSE for details.
+  years_of_experience <- c(8, 10, 10, 1, 10, 10, 8, 12, 1, 12)
+
+  # Using data.frame to print table in org mode
+  data.frame(
+    sum = sum(years_of_experience),
+    avg = mean(years_of_experience),
+    median = median(years_of_experience),
+    length = length(years_of_experience),
+    sd = sd(years_of_experience),
+    rounded_sd = round(sd(years_of_experience))
+  )
+
+  # This is asked
+  #print(round(sd(years_of_experience)))
+#+end_src
+
+#+RESULTS:
+| sum | avg | median | length |               sd | rounded_sd |
+|-----+-----+--------+--------+------------------+------------|
+|  82 | 8.2 |     10 |     10 | 4.02216083439956 |          4 |
