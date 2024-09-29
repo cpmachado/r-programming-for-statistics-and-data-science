@@ -1,7 +1,7 @@
 #+title: Solutions to R Programming for Statistics and Data Science
 #+startup: overview indent
 #+columns: %ITEM %SECTION %CHAPTER
-#+PROPERTY: SECTION_ALL 3 4
+#+PROPERTY: SECTION_ALL 3 5 2
 
 * Exercise 1: Creating an object in R
 :PROPERTIES:
@@ -18,21 +18,6 @@ Use pemdas and it will work, hence the parantheses in the answer.
   answer <- (z - 6) / 3
   data.frame(x, y, z, answer)
 #+end_src
-
-#+RESULTS:
-|  x |  y |  z | answer |
-|----+----+----+--------|
-| 10 | 12 | 36 |     10 |
-| 11 | 13 | 39 |     11 |
-| 12 | 14 | 42 |     12 |
-| 13 | 15 | 45 |     13 |
-| 14 | 16 | 48 |     14 |
-| 15 | 17 | 51 |     15 |
-| 16 | 18 | 54 |     16 |
-| 17 | 19 | 57 |     17 |
-| 18 | 20 | 60 |     18 |
-| 19 | 21 | 63 |     19 |
-| 20 | 22 | 66 |     20 |
 
 * Exercise 2: Data types in R
 :PROPERTIES:
@@ -80,9 +65,6 @@ Some kind of coercion is applied to transform double to character.
   # -> "character"
   typeof(employees)
 #+end_src
-
-#+RESULTS:
-: character
 
 * Exercise 3: Coercion rules in R
 :PROPERTIES:
@@ -141,9 +123,6 @@ seems.
   typeof(coerce.check)
 #+end_src
 
-#+RESULTS:
-: double
-
 * Exercise 4: Using functions in R
 :PROPERTIES:
 :CHAPTER:  15
@@ -166,11 +145,6 @@ seems.
   # This is asked
   #print(round(sd(years_of_experience)))
 #+end_src
-
-#+RESULTS:
-| sum | avg | median | length |               sd | rounded_sd |
-|-----+-----+--------+--------+------------------+------------|
-|  82 | 8.2 |     10 |     10 | 4.02216083439956 |          4 |
 
 * Exercise 5: The arguments of a function
 :PROPERTIES:
@@ -215,11 +189,6 @@ The na.rm parameter in median ignores NA values, which if passed become the resu
     salary_median = median(salary)
   )
 #+end_src
-
-#+RESULTS:
-| years_of_experience_median_rmt | years_of_experience_median | salary_median_rmt | salary_median |
-|--------------------------------+----------------------------+-------------------+---------------|
-|                             10 |                         10 |              3500 |               |
 
 * Exercise 6: Building a function in R
 :PROPERTIES:
@@ -308,18 +277,6 @@ The weight gets recycled.
   names(salary)
 #+end_src
 
-#+RESULTS:
-| Belinda Johnes  |
-| Maria Delar     |
-| Math Smith      |
-| Matt Williams   |
-| Robert Mathews  |
-| Julia Walters   |
-| Andrea Cheng    |
-| July Horitz     |
-| Danielle Muller |
-| Esteban Lugo    |
-
 * Exercise 9: Indexing and slicing a vector
 :PROPERTIES:
 :CHAPTER:  29
@@ -365,3 +322,22 @@ The weight gets recycled.
   attributes(s)
   class(s)
 #+end_src
+
+* Exercise 11: Creating a matrix in R
+:PROPERTIES:
+:SECTION:  5
+:CHAPTER:  34
+:END:
+#+begin_src R :tangle exercise11.r :colnames yes :rownames yes
+  # See LICENSE for details.
+
+  # Just one method using expand.grid as cartesian product, as it seemed more elegant
+  pieces <- c(rep("pawn", 8), "rook", "knight", "bishop",  "queen", "king", "bishop", "knight", "rook")
+  players <- c("black", "white")
+
+  chess <- expand.grid(x = pieces, y = players)
+  colnames(chess) <- c("Piece", "Player")
+  chess
+#+end_src
+
+
